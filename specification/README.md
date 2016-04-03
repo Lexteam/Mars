@@ -6,7 +6,6 @@ It will use the file extension `.mars`.
 ## Access Modifiers
 - `public`
 - `private`
-- `protected`
 
 If no modifier is set, then public is assumed.
 
@@ -14,23 +13,19 @@ If no modifier is set, then public is assumed.
 The public modifier should be used to allow global access.
 
 ### private
-The private modifier restricts access to that class only.
-
-### protected
-The protected modifier restricts access to that package only.
+The private modifier restricts access to that package only.
 
 ### Examples
 | Modifier  | Example               | Note                                     |
 | --------- | --------------------- | ---------------------------------------- |
 | public    | string name           | Optionally you can do public string name |
 | private   | private string name   |                                          |
-| protected | protected string name |                                          |
 
 ## Keywords
 See [keywords.md](keywords.md).
 
 ## Semi-colons?
-The use of semi-colons will be optional, although discouraged.
+Although they will be supported, they are not required.
 
 ## Setting the package
 To set the package all you have to do is have it in the correct directory and add the following line to the top of your source file.
@@ -54,18 +49,49 @@ Comments are defined by using `//`.
 ```
 A long comment is defined by it's start `/*` and it's end `*/`, the content it contains can be formatted however the programmer likes.
 
+## Source files
+Unlike in Java, you don't have to name the source file after the name it will have, infact source files can have multiple classes/structs/etc.
+The most basic class would define a main method.
+
+```
+void main(string[] args) {
+    println("Hello, World!")
+}
+```
+
 ## Example class
-The following is a example of a source file.
+The following is a example of a class.
 
 ```
 package uk.jamierocks.example // Set the package
 
-class Example { // Set the class - see I have used no access modifier because it will default to public
+class ExampleClass { // Set the class - see I have used no access modifier because it will default to public
 
 	private string name // Declared a private field - notice no semi-colon?
 
 	string getName() { // Declared a method - see no access modifer - again public is assumed.
 		return name
 	}
+
 }
+```
+
+## Structs
+Unlike the likes of Java, Mars has structs.
+
+```
+package uk.jamierocks.example
+
+struct ExampleStruct {
+    
+    string name
+    string author
+    
+}
+```
+
+You can make an instance of that structs like the following.
+
+```
+new uk.jamierocks.example.ExampleStruct("iWoz", "Steve Wozniak")
 ```
