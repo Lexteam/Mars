@@ -59,11 +59,11 @@ void main(string[] args) {
 }
 ```
 
-## Example class
+## Classes
 The following is a example of a class.
 
 ```
-package uk.jamierocks.example // Set the package
+package xyz.lexteam.example // Set the package
 
 class ExampleClass { // Set the class - see I have used no access modifier because it will default to public
 
@@ -80,9 +80,9 @@ class ExampleClass { // Set the class - see I have used no access modifier becau
 Unlike the likes of Java, Mars has structs.
 
 ```
-package uk.jamierocks.example
+package xyz.lexteam.example
 
-struct ExampleStruct {
+struct Book {
     
     string name
     string author
@@ -90,8 +90,29 @@ struct ExampleStruct {
 }
 ```
 
-You can make an instance of that structs like the following.
+You can make an instance of that struct like the following.
 
 ```
-new uk.jamierocks.example.ExampleStruct("iWoz", "Steve Wozniak")
+new xyz.lexteam.example.Book("iWoz", "Steve Wozniak")
+```
+
+## Enums
+The following is an example of a enum.
+
+```
+package xyz.lexteam.example
+
+enum OperatingSystem {
+    
+    OSX('mac'),
+    LINUX('nix'),
+    WINDOWS('dows');
+    
+    private string identifier
+    
+    OperatingSystem(string identifier) {
+        this.identifier = identifier
+    }
+    
+}
 ```
