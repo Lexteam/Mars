@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group = 'xyz.lexteam.mars'
+version = '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}
