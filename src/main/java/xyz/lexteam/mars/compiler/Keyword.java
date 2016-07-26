@@ -5,12 +5,14 @@ package xyz.lexteam.mars.compiler;
  */
 public enum Keyword {
 
+    PACKAGE,
     PUBLIC,
     PRIVATE,
     CLASS,
     INTERFACE,
     ENUM,
     STRUCT,
+    NEW,
     STRING,
     BOOL,
     INT,

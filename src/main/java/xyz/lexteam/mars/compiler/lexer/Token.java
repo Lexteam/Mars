@@ -29,7 +29,6 @@ public class Token {
      * Represents the type of the token.
      */
     enum Type {
-        PACKAGE,
         STRING,
         KEYWORD,
     }

@@ -21,7 +21,6 @@ public final class Lexer {
         String str = "";
 
         for (char character : contents) {
-
             switch (state) {
                 case DEFAULT:
                     // Check for unknown tokens
@@ -39,13 +38,10 @@ public final class Lexer {
                     }
 
                     // look for tokens
-                    if (token.equals("package")) { // package
-                        tokens.add(new Token(Token.Type.PACKAGE));
-                        token = ""; // reset token
-                    } else if (token.equals("\"")) { // string
+                    if (token.equals("\"")) { // string
                         state = State.STRING;
                         token = ""; // reset token
-                    } else if (Keyword.isKeyword(token)) {
+                    } else if (Keyword.isKeyword(token)) { // keyword
                         tokens.add(new TokenKeyword(Keyword.getKeyword(token)));
                         token = ""; // reset token
                     }
