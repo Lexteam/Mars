@@ -50,7 +50,7 @@ Comments are defined by using `//`.
 A long comment is defined by it's start `/*` and it's end `*/`, the content it contains can be formatted however the programmer likes.
 
 ## Source files
-Unlike in Java, you don't have to name the source file after the name it will have, infact source files can have multiple classes/structs/etc.
+Unlike in Java, you don't have to name the source file after the class it will contain, infact source files can have multiple classes/structs/etc.
 The most basic class would define a main method.
 
 ```
