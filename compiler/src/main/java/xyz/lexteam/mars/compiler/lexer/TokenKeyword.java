@@ -1,5 +1,6 @@
 package xyz.lexteam.mars.compiler.lexer;
 
+import com.google.common.base.MoreObjects;
 import xyz.lexteam.mars.compiler.Keyword;
 
 /**
@@ -20,6 +21,9 @@ public class TokenKeyword extends Token {
 
     @Override
     public String toString() {
-        return "TokenKeyword(keyword: " + keyword.name() + ")";
+        return MoreObjects.toStringHelper(this)
+                .add("keyword", this.keyword.name())
+                .toString();
     }
+
 }

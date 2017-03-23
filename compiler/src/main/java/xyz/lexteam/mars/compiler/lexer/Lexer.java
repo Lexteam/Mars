@@ -24,7 +24,7 @@ public final class Lexer {
             switch (state) {
                 case DEFAULT:
                     // Check for unknown tokens
-                    if (character == ' ' || character == '\n') {
+                    if (character == ' ' || character == '\n' || character == ';') {
                         // check if its an unknown token
                         if (!token.equals("")) {
                             System.out.println("Unknown token found: " + token);

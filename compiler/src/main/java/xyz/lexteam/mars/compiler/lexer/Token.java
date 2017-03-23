@@ -1,5 +1,7 @@
 package xyz.lexteam.mars.compiler.lexer;
 
+import com.google.common.base.MoreObjects;
+
 /**
  * Represents a token.
  */
@@ -7,7 +9,7 @@ public class Token {
 
     private final Type type;
 
-    public Token(Type type) {
+    Token(Type type) {
         this.type = type;
     }
 
@@ -22,7 +24,9 @@ public class Token {
 
     @Override
     public String toString() {
-        return "Token(type: " + this.type + ")";
+        return MoreObjects.toStringHelper(this)
+                .add("type", this.type)
+                .toString();
     }
 
     /**
@@ -32,4 +36,5 @@ public class Token {
         STRING,
         KEYWORD,
     }
+
 }

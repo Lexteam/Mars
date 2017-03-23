@@ -1,5 +1,7 @@
 package xyz.lexteam.mars.compiler.lexer;
 
+import com.google.common.base.MoreObjects;
+
 /**
  * Represents a string token.
  */
@@ -23,6 +25,9 @@ public class TokenString extends Token {
 
     @Override
     public String toString() {
-        return "TokenString(value: " + this.value + ")";
+        return MoreObjects.toStringHelper(this)
+                .add("value", this.value)
+                .toString();
     }
+
 }
