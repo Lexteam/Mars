@@ -1,4 +1,4 @@
-Mars Langauge Specification
+Mars Language Specification
 ===========================
 The Mars programming language will follow a similar syntax to that of Groovy.
 It will use the file extension `.mars`.
